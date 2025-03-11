@@ -1,12 +1,10 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Hero from "@/components/Hero";
 import FoodCard from "@/components/FoodCard";
 import RecipeDetail from "@/components/RecipeDetail";
 import useRecipes from "@/hooks/useRecipes";
 import AnimatedContainer from "@/components/AnimatedContainer";
-import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   const {
@@ -16,7 +14,6 @@ const Index = () => {
     currentView,
     searchRecipes,
     selectRecipe,
-    clearSelection,
     changeView
   } = useRecipes();
 
