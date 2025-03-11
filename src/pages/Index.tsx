@@ -37,6 +37,9 @@ const Index = () => {
     setIsDialogOpen(false);
   };
 
+  // Ensure we display a limited number of recipes (3-5) for better visual appeal
+  const limitedResults = results.slice(0, 5);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero section with search */}
@@ -74,7 +77,7 @@ const Index = () => {
               </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {results.map((recipe, index) => (
+                {limitedResults.map((recipe, index) => (
                   <FoodCard
                     key={recipe.id}
                     recipe={recipe}
