@@ -48,3 +48,27 @@ export const blurIn = {
   exit: { filter: "blur(8px)", opacity: 0 },
   transition: { duration: 0.6, ease: transitions.easeOut }
 };
+
+// Pulse animation
+export const pulse = {
+  animate: { 
+    scale: [1, 1.03, 1],
+    transition: {
+      duration: 1.5,
+      repeat: Infinity,
+      repeatType: "loop"
+    }
+  }
+};
+
+// Click animations
+export const clickScale = {
+  scale: 0.97,
+  transition: { duration: 0.1 }
+};
+
+export const cardHover = {
+  y: -5,
+  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
+  transition: { duration: 0.3, ease: transitions.easeOutBack }
+};
