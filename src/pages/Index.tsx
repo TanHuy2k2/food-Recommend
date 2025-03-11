@@ -96,6 +96,7 @@ const Index = () => {
         <DialogContent
           className="p-0 max-w-3xl w-[95vw] rounded-2xl border bg-background shadow-lg"
           onInteractOutside={(e) => e.preventDefault()}
+          hideCloseButton={true} // Hide the default close button since we have our own back button
         >
           {selectedRecipe && (
             <RecipeDetail

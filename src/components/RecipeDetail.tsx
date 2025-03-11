@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Clock, Utensils, Image, ListChecks, Video, X } from "lucide-react";
+import { ArrowLeft, Clock, Utensils, Image, ListChecks, Video } from "lucide-react";
 import { cn } from "@/lib/animations";
 import { type Recipe, type RecipeView } from "@/hooks/useRecipes";
 import AnimatedContainer from "./AnimatedContainer";
@@ -166,10 +165,7 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({
           </Button>
         </div>
         
-        <Button variant="ghost" size="icon" onClick={onClose} className="shrink-0">
-          <X size={20} />
-          <span className="sr-only">Close</span>
-        </Button>
+        <div className="w-10 h-10"></div>
       </div>
       
       <div className="p-6 max-h-[70vh] overflow-y-auto">
