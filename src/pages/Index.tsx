@@ -50,14 +50,14 @@ const Index = () => {
               <h2 className="text-2xl font-semibold">
                 {loading
                   ? "Searching recipes..."
-                  : results.length
+                  : results.length && hasSearched
                   ? `Found ${results.length} recipes`
                   : "No recipes found"}
               </h2>
               <p className="text-muted-foreground">
                 {loading
                   ? "Just a moment while we find the best recipes for you"
-                  : results.length
+                  : results.length && hasSearched
                   ? "Click on any recipe to see details"
                   : "Try searching for different ingredients"}
               </p>

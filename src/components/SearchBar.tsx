@@ -54,12 +54,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
     }
   };
 
-  const handleSearchButtonClick = () => {
-    if (query.trim()) {
-      onSearch(query.trim());
-    }
-  };
-
   return (
     <form
       onSubmit={handleSubmit}
@@ -122,7 +116,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
         type="submit"
         variant="default"
         className="h-14 px-6 rounded-full transition-all shrink-0"
-        onClick={handleSearchButtonClick}
       >
         Search
       </Button>

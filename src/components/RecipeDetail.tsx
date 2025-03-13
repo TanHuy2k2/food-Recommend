@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 // import { Separator } from "@/components/ui/separator";
-// import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Clock, Utensils, Image, ListChecks, Video } from "lucide-react";
 // import { cn } from "@/lib/animations";
 import { type Recipe, type RecipeView } from "@/hooks/useRecipes";
@@ -35,24 +35,24 @@ const RecipeDetail: React.FC<RecipeDetailProps> = ({
             </div>
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold text-balance">{recipe.name}</h2>
-              <p className="text-muted-foreground">{recipe.description}</p>
+              <p className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: recipe.description }}></p>
               
-              {/* <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2">
                 {recipe.tags.map((tag) => (
                   <Badge key={tag} variant="secondary">
                     {tag}
                   </Badge>
                 ))}
-              </div> */}
+              </div>
               
               <div className="flex flex-wrap gap-6 pt-2">
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                   <Clock size={18} className="text-muted-foreground" />
                   <span>Prep: {recipe.prepTime} min</span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-2">
                   <Utensils size={18} className="text-muted-foreground" />
-                  <span>Cook: {recipe.cookTime} min</span>
+                  <span>Time: {recipe.totalTime} min</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span>Servings: {recipe.servings}</span>

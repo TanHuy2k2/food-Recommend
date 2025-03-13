@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-// import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/animations";
 import { type Recipe } from "@/hooks/useRecipes";
 import AnimatedContainer from "./AnimatedContainer";
@@ -47,16 +47,16 @@ const FoodCard: React.FC<FoodCardProps> = ({ recipe, onClick, index }) => {
         </div>
         
         <div className="p-4">
-          {/* <div className="flex gap-1 flex-wrap mb-3">
+          <div className="flex gap-1 flex-wrap mb-3">
             {recipe.tags.slice(0, 3).map((tag) => (
               <Badge key={tag} variant="secondary" className="text-xs">
                 {tag}
               </Badge>
             ))}
-          </div> */}
+          </div>
           
           <div className="flex justify-between text-sm text-muted-foreground">
-            <span>{recipe.prepTime + recipe.cookTime} min</span>
+            <span>{recipe.totalTime} min</span>
             <span>{recipe.calories} cal</span>
             <span>{recipe.servings} servings</span>
           </div>
